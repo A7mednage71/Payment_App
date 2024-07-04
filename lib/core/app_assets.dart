@@ -5,6 +5,10 @@ class Assets {
   /// assets/applepay.svg
   static const String imageApplepay = "assets/applepay.svg";
 
+  /// Assets for imageBackarrow
+  /// assets/backarrow.svg
+  static const String imageBackarrow = "assets/backarrow.svg";
+
   /// Assets for imageBarcode
   /// assets/Barcode.svg
   static const String imageBarcode = "assets/Barcode.svg";
