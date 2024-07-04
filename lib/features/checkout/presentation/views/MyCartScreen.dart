@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:payment_app/core/app_assets.dart';
 import 'package:payment_app/core/app_styles.dart';
 
 class MyCartScreen extends StatelessWidget {
@@ -8,11 +10,24 @@ class MyCartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onPressed: () {},
+          icon: SvgPicture.asset(
+            Assets.imageBackarrow,
+            height: 24,
+            width: 24,
+          ),
+        ),
         title: const Text(
           "My Cart",
           style: AppStyles.medium25,
         ),
         centerTitle: true,
+      ),
+      body: const Column(
+        children: [],
       ),
     );
   }
