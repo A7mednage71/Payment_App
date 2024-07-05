@@ -25,6 +25,8 @@ class Assets {
   /// assets/paypal.svg
   static const String imagePaypal = "assets/paypal.svg";
 
+  static const String imageCheckImage = "assets/CheckImage.svg";
+
   /// PNg images
   static const String basketimage = "assets/basket.png";
 }
