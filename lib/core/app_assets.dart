@@ -1,6 +1,6 @@
 class Assets {
   Assets._();
-  
+
   /// Assets for imageApplepay
   /// assets/applepay.svg
   static const String imageApplepay = "assets/applepay.svg";
@@ -13,10 +13,6 @@ class Assets {
   /// assets/Barcode.svg
   static const String imageBarcode = "assets/Barcode.svg";
 
-  /// Assets for imageBasket
-  /// assets/basket.svg
-  static const String imageBasket = "assets/basket.svg";
-
   /// Assets for imageCard
   /// assets/card.svg
   static const String imageCard = "assets/card.svg";
@@ -28,5 +24,7 @@ class Assets {
   /// Assets for imagePaypal
   /// assets/paypal.svg
   static const String imagePaypal = "assets/paypal.svg";
-}
 
+  /// PNg images
+  static const String basketimage = "assets/basket.png";
+}

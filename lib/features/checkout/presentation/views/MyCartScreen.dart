@@ -14,11 +14,7 @@ class MyCartScreen extends StatelessWidget {
           splashColor: Colors.transparent,
           highlightColor: Colors.transparent,
           onPressed: () {},
-          icon: SvgPicture.asset(
-            Assets.imageBackarrow,
-            height: 24,
-            width: 24,
-          ),
+          icon: SvgPicture.asset(Assets.imageBackarrow),
         ),
         title: const Text(
           "My Cart",
@@ -26,8 +22,10 @@ class MyCartScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const Column(
-        children: [],
+      body: Column(
+        children: [
+          Image.asset(Assets.basketimage),
+        ],
       ),
     );
   }
