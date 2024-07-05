@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/methods/get_app_bar.dart';
-import 'package:payment_app/core/utils/app_assets.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/payment_method_item.dart';
+import 'package:payment_app/features/checkout/presentation/widgets/payment_methods_list_view.dart';
 
 class PaymentDetailsPage extends StatelessWidget {
   const PaymentDetailsPage({super.key});
@@ -12,10 +11,9 @@ class PaymentDetailsPage extends StatelessWidget {
       appBar: getMyAppBar("Payment Details"),
       body: const Column(
         children: [
-          PymentMethodItem(
-            isactive: false,
-            image: Assets.imagePaypal,
-          ),
+          SizedBox(height: 32),
+          PaymentMethodslistView(),
+          SizedBox(height: 34),
         ],
       ),
     );

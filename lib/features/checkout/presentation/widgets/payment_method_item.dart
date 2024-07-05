@@ -11,7 +11,8 @@ class PymentMethodItem extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
       height: 62,
       width: 104,
       decoration: ShapeDecoration(
