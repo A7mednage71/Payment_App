@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/core/app_styles.dart';
+import 'package:payment_app/core/utils/app_styles.dart';
 import 'package:payment_app/features/checkout/presentation/views/payment_details.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/custom_elevated_button.dart';
 
