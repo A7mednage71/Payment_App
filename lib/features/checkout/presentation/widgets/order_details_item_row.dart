@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/app_styles.dart';
 
-class OrderDetailsRow extends StatelessWidget {
-  const OrderDetailsRow({
+class OrderDetailsItemRow extends StatelessWidget {
+  const OrderDetailsItemRow({
     super.key,
     required this.title,
     required this.price,

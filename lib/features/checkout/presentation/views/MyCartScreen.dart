@@ -25,13 +25,14 @@ class MyCartScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 25),
-          Image.asset(Assets.basketimage),
+          Expanded(child: Image.asset(Assets.basketimage)),
           const SizedBox(height: 25),
           const CartScreenOrdersDetails(),
           const SizedBox(height: 17),
           const Divider(thickness: 2, endIndent: 35, indent: 35),
           const SizedBox(height: 17),
-          const CartscreenBottomWidget()
+          const CartscreenBottomWidget(),
+          const SizedBox(height: 12),
         ],
       ),
     );
