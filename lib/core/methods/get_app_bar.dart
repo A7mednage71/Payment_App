@@ -5,6 +5,7 @@ import 'package:payment_app/core/utils/app_styles.dart';
 
 AppBar getMyAppBar(String title) {
   return AppBar(
+    backgroundColor: const Color(0xffFFFFFF),
     leading: IconButton(
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,

@@ -9,6 +9,7 @@ class PaymentDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffFFFFFF),
       appBar: getMyAppBar("Payment Details"),
       body: const SingleChildScrollView(
         child: Column(

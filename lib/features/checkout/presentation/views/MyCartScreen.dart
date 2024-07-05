@@ -10,6 +10,7 @@ class MyCartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffFFFFFF),
       appBar: getMyAppBar("My Cart"),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
