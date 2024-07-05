@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:payment_app/features/checkout/presentation/views/thank_you.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/custom_elevated_button.dart';
 
 class CustomCreditCard extends StatefulWidget {
@@ -58,6 +59,10 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
               } else {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const ThankYouScreen();
+                }));
                 setState(() {
                   autovalidateMode = AutovalidateMode.always;
                 });
