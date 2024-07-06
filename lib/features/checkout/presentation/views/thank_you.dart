@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:payment_app/core/methods/get_app_bar.dart';
-import 'package:payment_app/core/utils/app_assets.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/custom_small_container.dart';
+import 'package:payment_app/features/checkout/presentation/widgets/custom_top_circle.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/thank_you_card.dart';
 
 class ThankYouScreen extends StatelessWidget {
@@ -29,19 +28,11 @@ class ThankYouScreen extends StatelessWidget {
               right: -35 / 2,
               child: const CustomSmallContainer(),
             ),
-            Positioned(
+            const Positioned(
               top: -50,
               left: 138,
               // right: MediaQuery.sizeOf(context).width * 0.35,
-              child: CircleAvatar(
-                radius: 50,
-                backgroundColor: const Color(0xffEDEDED),
-                child: CircleAvatar(
-                  radius: 40,
-                  backgroundColor: const Color(0xff34A853),
-                  child: SvgPicture.asset(Assets.imageCheckImage),
-                ),
-              ),
+              child: CustomTopcircle(),
             )
           ],
         ),

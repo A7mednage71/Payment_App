@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/utils/app_styles.dart';
+import 'package:payment_app/features/checkout/presentation/widgets/thank_you_item_info.dart';
 
 class ThankYouTopWidgets extends StatelessWidget {
   const ThankYouTopWidgets({super.key});
@@ -12,29 +13,11 @@ class ThankYouTopWidgets extends StatelessWidget {
         Text("Thank you!", style: AppStyles.medium25),
         Text("Your transaction was successful", style: AppStyles.regular20),
         SizedBox(height: 42),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Date", style: AppStyles.regular18),
-            Text("01/24/2023", style: AppStyles.semiBold18),
-          ],
-        ),
+        ThankYouItemInfo(text1: "Date", text2: "01/24/2023"),
         SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Time", style: AppStyles.regular18),
-            Text("10:15 AM", style: AppStyles.semiBold18),
-          ],
-        ),
+        ThankYouItemInfo(text1: "Time", text2: "10:15 AM"),
         SizedBox(height: 20),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("To", style: AppStyles.regular18),
-            Text("Sam Louis", style: AppStyles.semiBold18),
-          ],
-        ),
+        ThankYouItemInfo(text1: "To", text2: "Sam Louis"),
         SizedBox(height: 30),
       ],
     );
