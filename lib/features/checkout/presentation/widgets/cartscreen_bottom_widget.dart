@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/features/checkout/presentation/views/payment_details.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/custom_elevated_button.dart';
+import 'package:payment_app/features/checkout/presentation/widgets/payment_methodsBottomsheet.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/total_widget.dart';
 
 class CartscreenBottomWidget extends StatelessWidget {
@@ -18,9 +18,15 @@ class CartscreenBottomWidget extends StatelessWidget {
           CustomElevatedButton(
             text: "Complete Payment",
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return const PaymentDetailsPage();
-              }));
+              // Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              //   return const PaymentDetailsPage();
+              // }));
+
+              showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return const PaymentMethodsBottomSheet();
+                  });
             },
           )
         ],
