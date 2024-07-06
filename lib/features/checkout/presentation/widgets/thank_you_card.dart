@@ -38,8 +38,9 @@ class ThankYouCard extends StatelessWidget {
               indent: 25,
               endIndent: 25,
             ),
-            SizedBox(height: 60),
-            ThankYouBottomWidgets()
+            SizedBox(height: 58),
+            ThankYouBottomWidgets(),
+            SizedBox(height: 58),
           ],
         ),
       ),
