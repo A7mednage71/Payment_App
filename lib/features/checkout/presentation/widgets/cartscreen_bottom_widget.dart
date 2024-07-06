@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/core/utils/app_styles.dart';
 import 'package:payment_app/features/checkout/presentation/views/payment_details.dart';
 import 'package:payment_app/features/checkout/presentation/widgets/custom_elevated_button.dart';
+import 'package:payment_app/features/checkout/presentation/widgets/total_widget.dart';
 
 class CartscreenBottomWidget extends StatelessWidget {
   const CartscreenBottomWidget({super.key});
@@ -13,13 +13,7 @@ class CartscreenBottomWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Total", style: AppStyles.semiBold20),
-              Text(r"$50.97", style: AppStyles.semiBold20)
-            ],
-          ),
+          const TotalWidget(price: r"$50.97"),
           const SizedBox(height: 17),
           CustomElevatedButton(
             text: "Complete Payment",

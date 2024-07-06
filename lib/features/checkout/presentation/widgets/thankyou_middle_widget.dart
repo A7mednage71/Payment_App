@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:payment_app/core/utils/app_assets.dart';
 import 'package:payment_app/core/utils/app_styles.dart';
+import 'package:payment_app/features/checkout/presentation/widgets/total_widget.dart';
 
 class ThankYouMiddleWidgets extends StatelessWidget {
   const ThankYouMiddleWidgets({super.key});
@@ -11,13 +12,7 @@ class ThankYouMiddleWidgets extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(height: 24),
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Total", style: AppStyles.semiBold24),
-            Text(r"$50.97", style: AppStyles.semiBold24),
-          ],
-        ),
+        const TotalWidget(price: r"$50.97"),
         const SizedBox(height: 30),
         Card(
           color: Colors.white,
