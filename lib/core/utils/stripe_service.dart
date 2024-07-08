@@ -29,5 +29,5 @@ class StripeService {
 
   Future displayPaymentsheet() async {
     Stripe.instance.presentPaymentSheet();
-  }
+  } 
 }
