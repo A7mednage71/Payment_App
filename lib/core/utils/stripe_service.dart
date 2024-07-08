@@ -26,4 +26,8 @@ class StripeService {
       paymentIntentClientSecret: paymentIntentClientSecret,
     ));
   }
+
+  Future displayPaymentsheet() async {
+    Stripe.instance.presentPaymentSheet();
+  }
 }
