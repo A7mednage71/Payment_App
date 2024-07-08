@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/thankyou_middle_widget.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/thankyou_top_widget.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/yhankyou_bottom_widgets.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/thankyou_middle_widget.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/thankyou_top_widget.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/yhankyou_bottom_widgets.dart';
 import 'package:styled_divider/styled_divider.dart';
 
 class ThankYouCard extends StatelessWidget {

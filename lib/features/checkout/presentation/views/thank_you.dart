@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:payment_app/core/utils/app_assets.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/custom_small_container.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/custom_top_circle.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/thank_you_card.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/custom_small_container.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/custom_top_circle.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/thank_you_card.dart';
 
 class ThankYouScreen extends StatelessWidget {
   const ThankYouScreen({super.key});

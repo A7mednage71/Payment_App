@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/utils/app_styles.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/thank_you_item_info.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/thank_you_item_info.dart';
 
 class ThankYouTopWidgets extends StatelessWidget {
   const ThankYouTopWidgets({super.key});

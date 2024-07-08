@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/custom_elevated_button.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/payment_methodsBottomsheet.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/total_widget.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/custom_elevated_button.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/payment_methodsBottomsheet.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/total_widget.dart';
 
 class CartscreenBottomWidget extends StatelessWidget {
   const CartscreenBottomWidget({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/methods/get_app_bar.dart';
 import 'package:payment_app/core/utils/app_assets.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/cartscreen_bottom_widget.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/cartscreen_orders_details.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/cartscreen_bottom_widget.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/cartscreen_orders_details.dart';
 
 class MyCartScreen extends StatelessWidget {
   const MyCartScreen({super.key});

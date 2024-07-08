@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/order_details_item_row.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/order_details_item_row.dart';
 
 class CartScreenOrdersDetails extends StatelessWidget {
   const CartScreenOrdersDetails({

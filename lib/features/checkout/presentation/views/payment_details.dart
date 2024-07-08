@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_app/core/methods/get_app_bar.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/custom_credit_card.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/payment_methods_list_view.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/custom_credit_card.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/payment_methods_list_view.dart';
 
 class PaymentDetailsPage extends StatelessWidget {
   const PaymentDetailsPage({super.key});

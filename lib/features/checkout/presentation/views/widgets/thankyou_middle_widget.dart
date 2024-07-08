@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/credit_card_listtile.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/total_widget.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/credit_card_listtile.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/total_widget.dart';
 
 class ThankYouMiddleWidgets extends StatelessWidget {
   const ThankYouMiddleWidgets({super.key});

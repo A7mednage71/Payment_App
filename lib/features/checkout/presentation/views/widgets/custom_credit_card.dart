@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:payment_app/features/checkout/presentation/views/thank_you.dart';
-import 'package:payment_app/features/checkout/presentation/widgets/custom_elevated_button.dart';
+import 'package:payment_app/features/checkout/presentation/views/widgets/custom_elevated_button.dart';
 
 class CustomCreditCard extends StatefulWidget {
   const CustomCreditCard({super.key});
