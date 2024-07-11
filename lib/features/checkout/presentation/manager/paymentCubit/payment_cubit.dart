@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:payment_app/features/checkout/data/models/payment_intent_input_model/payment_intent_input_model.dart';
@@ -21,5 +23,11 @@ class PaymentCubit extends Cubit<PaymentState> {
         emit(PaymentSuccess());
       },
     );
+  }
+
+  @override
+  void onChange(Change<PaymentState> change) {
+    log(change.toString());
+    super.onChange(change);
   }
 }
