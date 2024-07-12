@@ -21,7 +21,6 @@ class ApiService {
   }
 }
 
-
 // # Create a Customer (use an existing Customer ID if this is a returning customer)
 // curl https://api.stripe.com/v1/customers \
 //   -u sk_test_51PZypMRtGBHRxRYXJSNIcCFZUzT775fcV2BqH1A2vaIq021ZLp5uK0q8aZFO6nNtzIGZjuFCC2G19XryAIwyuhYw005YnKQ5Q9: \

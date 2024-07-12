@@ -25,7 +25,6 @@ class PaymentApp extends StatelessWidget {
 // paymentintentmodel create payment intent( currency , amount , customerid)
 // Keysecret create EphemeralKey(customerid); take strpeversion as header
 // initpaymentsheet(merchanDisplaytname , intentclientsecret, ephemeralkeysecret);
-// presentpaymentsheet(); 
-
+// presentpaymentsheet();
 
 //
