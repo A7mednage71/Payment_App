@@ -3,6 +3,7 @@ import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:payment_app/core/utils/api_keys.dart';
 import 'package:payment_app/core/utils/api_service.dart';
 import 'package:payment_app/features/checkout/data/models/epheremal_key_model/ephermal_key_model/ephermal_key_model.dart';
+import 'package:payment_app/features/checkout/data/models/init_payment_sheet_input_model/init_payment_sheet_input_model.dart';
 import 'package:payment_app/features/checkout/data/models/payment_intent_input_model/payment_intent_input_model.dart';
 import 'package:payment_app/features/checkout/data/models/payment_intent_model/payment_intent_model.dart';
 
@@ -40,11 +41,13 @@ class StripeService {
   }
 
   Future integratepaymentsheet(
-      {required String paymentIntentClientSecret}) async {
+      {required InitPaymentSheetInputModel paymentSheetInputModel}) async {
     await Stripe.instance.initPaymentSheet(
         paymentSheetParameters: SetupPaymentSheetParameters(
       merchantDisplayName: "Abo Nageh",
-      paymentIntentClientSecret: paymentIntentClientSecret,
+      paymentIntentClientSecret: paymentSheetInputModel.intentClientSecret,
+      customerEphemeralKeySecret: paymentSheetInputModel.ephemeralKeySecret,
+      customerId: paymentSheetInputModel.customerId,
     ));
   }
 
@@ -55,8 +58,14 @@ class StripeService {
   Future makePayment(
       {required PaymentIntentInputModel paymentintentinputmodel}) async {
     var paymentintentmodel = await initiPaymentIntent(paymentintentinputmodel);
-    await integratepaymentsheet(
-        paymentIntentClientSecret: paymentintentmodel.clientSecret!);
+    var ephemeralmodel =
+        await createEphemeralKey(customerId: paymentintentmodel.customer);
+    var paymentSheetInputModel = InitPaymentSheetInputModel(
+      intentClientSecret: paymentintentmodel.clientSecret!,
+      ephemeralKeySecret: ephemeralmodel.secret!,
+      customerId: paymentintentmodel.customer,
+    );
+    await integratepaymentsheet(paymentSheetInputModel: paymentSheetInputModel);
     await displayPaymentsheet();
   }
 }
