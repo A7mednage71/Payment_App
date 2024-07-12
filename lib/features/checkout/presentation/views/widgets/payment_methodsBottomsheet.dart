@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:payment_app/core/methods/create_stripe_payment.dart';
+import 'package:payment_app/features/checkout/data/models/payment_intent_input_model/payment_intent_input_model.dart';
 import 'package:payment_app/features/checkout/presentation/manager/paymentCubit/payment_cubit.dart';
 import 'package:payment_app/features/checkout/presentation/views/thank_you.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/custom_elevated_button.dart';
@@ -41,7 +41,13 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
                     return CustomElevatedButton(
                       text: "Continue",
                       onPressed: () {
-                        createStripePayment(context);
+                        PaymentIntentInputModel paymentIntentInputModel =
+                            PaymentIntentInputModel(
+                                amount: '100',
+                                currency: 'USD',
+                                customerId: 'cus_QSSey3gVutkmHO');
+                        BlocProvider.of<PaymentCubit>(context).makepayment(
+                            paymentintentinputmodel: paymentIntentInputModel);
 
                         // var transactionAmountModel = TransactionAmountModel(
                         //   total: "100",
