@@ -31,6 +31,7 @@ class StripeService {
       },
       url: 'https://api.stripe.com/v1/ephemeral_keys',
       token: ApiKeys.stripeToken,
+      contentype: Headers.formUrlEncodedContentType,
       headers: {
         "Authorization": "Bearer ${ApiKeys.stripeToken}",
         'Stripe-Version': '2024-06-20'
