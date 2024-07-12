@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
+import 'package:payment_app/core/utils/api_keys.dart';
 import 'package:payment_app/features/checkout/data/models/transactions_models/transaction_amount_model/details.dart';
 import 'package:payment_app/features/checkout/data/models/transactions_models/transaction_amount_model/transaction_amount_model.dart';
 import 'package:payment_app/features/checkout/data/models/transactions_models/transactions_items_list/order_tem.dart';
@@ -84,8 +85,8 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => PaypalCheckoutView(
                             sandboxMode: true,
-                            clientId: "YOUR CLIENT ID",
-                            secretKey: "YOUR SECRET KEY",
+                            clientId: ApiKeys.clientID,
+                            secretKey: ApiKeys.secretKey,
                             transactions: [
                               {
                                 "amount": transactionAmountModel,
