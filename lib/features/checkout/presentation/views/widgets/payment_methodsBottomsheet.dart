@@ -1,13 +1,6 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
-import 'package:payment_app/core/utils/api_keys.dart';
-import 'package:payment_app/features/checkout/data/models/transactions_models/transaction_amount_model/details.dart';
-import 'package:payment_app/features/checkout/data/models/transactions_models/transaction_amount_model/transaction_amount_model.dart';
-import 'package:payment_app/features/checkout/data/models/transactions_models/transactions_items_list/order_tem.dart';
-import 'package:payment_app/features/checkout/data/models/transactions_models/transactions_items_list/transactions_order_items_list.dart';
+import 'package:payment_app/core/methods/create_stripe_payment.dart';
 import 'package:payment_app/features/checkout/presentation/manager/paymentCubit/payment_cubit.dart';
 import 'package:payment_app/features/checkout/presentation/views/thank_you.dart';
 import 'package:payment_app/features/checkout/presentation/views/widgets/custom_elevated_button.dart';
@@ -48,68 +41,62 @@ class PaymentMethodsBottomSheet extends StatelessWidget {
                     return CustomElevatedButton(
                       text: "Continue",
                       onPressed: () {
-                        // PaymentIntentInputModel paymentIntentInputModel =
-                        //     PaymentIntentInputModel(
-                        //         amount: '100',
-                        //         currency: 'USD',
-                        //         customerId: 'cus_QSSey3gVutkmHO');
-                        // BlocProvider.of<PaymentCubit>(context).makepayment(
-                        //     paymentintentinputmodel: paymentIntentInputModel);
+                        createStripePayment(context);
 
-                        var transactionAmountModel = TransactionAmountModel(
-                          total: "100",
-                          currency: "USD",
-                          details: Details(
-                            subtotal: "100",
-                            shipping: 0,
-                            shippingDiscount: 0,
-                          ),
-                        );
+                        // var transactionAmountModel = TransactionAmountModel(
+                        //   total: "100",
+                        //   currency: "USD",
+                        //   details: Details(
+                        //     subtotal: "100",
+                        //     shipping: 0,
+                        //     shippingDiscount: 0,
+                        //   ),
+                        // );
 
-                        var trasactionsItemList = TransactionsItemsList(
-                          orders: [
-                            OrderItem(
-                              name: "Apple",
-                              quantity: 4,
-                              currency: "10",
-                              price: "USD",
-                            ),
-                            OrderItem(
-                              name: "Pineapple",
-                              quantity: 5,
-                              currency: "12",
-                              price: "USD",
-                            ),
-                          ],
-                        );
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => PaypalCheckoutView(
-                            sandboxMode: true,
-                            clientId: ApiKeys.clientID,
-                            secretKey: ApiKeys.secretKey,
-                            transactions: [
-                              {
-                                "amount": transactionAmountModel,
-                                "description":
-                                    "The payment transaction description.",
-                                "item_list": trasactionsItemList
-                              }
-                            ],
-                            note: "Contact us for any questions on your order.",
-                            onSuccess: (Map params) async {
-                              log("onSuccess: $params");
-                              Navigator.pop(context);
-                            },
-                            onError: (error) {
-                              log("onError: $error");
-                              Navigator.pop(context);
-                            },
-                            onCancel: () {
-                              print('cancelled:');
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ));
+                        // var trasactionsItemList = TransactionsItemsList(
+                        //   orders: [
+                        //     OrderItem(
+                        //       name: "Apple",
+                        //       quantity: 4,
+                        //       currency: "10",
+                        //       price: "USD",
+                        //     ),
+                        //     OrderItem(
+                        //       name: "Pineapple",
+                        //       quantity: 5,
+                        //       currency: "12",
+                        //       price: "USD",
+                        //     ),
+                        //   ],
+                        // );
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //   builder: (BuildContext context) => PaypalCheckoutView(
+                        //     sandboxMode: true,
+                        //     clientId: ApiKeys.clientID,
+                        //     secretKey: ApiKeys.secretKey,
+                        //     transactions: [
+                        //       {
+                        //         "amount": transactionAmountModel,
+                        //         "description":
+                        //             "The payment transaction description.",
+                        //         "item_list": trasactionsItemList
+                        //       }
+                        //     ],
+                        //     note: "Contact us for any questions on your order.",
+                        //     onSuccess: (Map params) async {
+                        //       log("onSuccess: $params");
+                        //       Navigator.pop(context);
+                        //     },
+                        //     onError: (error) {
+                        //       log("onError: $error");
+                        //       Navigator.pop(context);
+                        //     },
+                        //     onCancel: () {
+                        //       print('cancelled:');
+                        //       Navigator.pop(context);
+                        //     },
+                        //   ),
+                        // ));
                       },
                       isLoading: state is PaymentLoading ? true : false,
                     );
